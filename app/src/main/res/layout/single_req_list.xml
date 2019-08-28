@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@android:color/white"
+    android:orientation="vertical">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/req_single_image"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:src="@drawable/avatar" />
+
+    <TextView
+        android:id="@+id/req_single_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_toEndOf="@+id/req_single_image"
+        android:fontFamily="sans-serif-medium"
+        android:text="User Name"
+        android:textColor="@color/black" />
+
+    <TextView
+        android:id="@+id/req_single_reason"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/req_single_name"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="0dp"
+        android:layout_toStartOf="@+id/req_decline"
+        android:layout_toEndOf="@+id/req_single_image"
+        android:maxLines="1"
+        android:text="Reason of vacation"
+        android:textColor="@color/design_default_color_on_secondary" />
+
+    <TextView
+        android:id="@+id/req_single_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/req_single_reason"
+        android:layout_marginStart="8dp"
+        android:layout_toEndOf="@+id/req_single_image"
+        android:text="date" />
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="wrap_content"
+        android:layout_height="1dp"
+        android:layout_below="@id/req_single_date"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:layout_toEndOf="@id/req_single_image"
+        android:background="@color/places_autocomplete_search_hint" />
+
+    <ImageView
+        android:id="@+id/req_approve"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_alignParentTop="false"
+        android:layout_alignParentEnd="true"
+        android:layout_centerVertical="true"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="8dp"
+        app:srcCompat="@drawable/ic_check_circle_black_24dp" />
+
+    <ImageView
+        android:id="@+id/req_decline"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_alignParentTop="false"
+        android:layout_centerVertical="true"
+        android:layout_marginTop="0dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="8dp"
+        android:layout_toStartOf="@+id/req_approve"
+        android:rotation="45"
+        app:srcCompat="@drawable/ic_add_circle_black_24dp" />
+
+</RelativeLayout>

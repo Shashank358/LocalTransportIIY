@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/set_up_nav"
+    app:startDestination="@id/mapFragment">
+
+    <fragment
+        android:id="@+id/mapFragment"
+        android:name="com.iiysoftware.localtransport.MapFragment"
+        android:label="fragment_map"
+        tools:layout="@layout/fragment_map" >
+        <action
+            android:id="@+id/action_mapFragment_to_routeFrag"
+            app:destination="@id/routeFrag" />
+        <action
+            android:id="@+id/action_mapFragment_to_routeFrag2"
+            app:destination="@id/routeFrag" />
+    </fragment>
+    <fragment
+        android:id="@+id/routeFrag"
+        android:name="com.iiysoftware.localtransport.RouteFrag"
+        android:label="fragment_route"
+        tools:layout="@layout/fragment_route" />
+    <fragment
+        android:id="@+id/vehicleFrag"
+        android:name="com.iiysoftware.localtransport.VehicleFrag"
+        android:label="fragment_vehicle"
+        tools:layout="@layout/fragment_vehicle" />
+</navigation>
